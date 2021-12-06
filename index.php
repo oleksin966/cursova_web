@@ -1,4 +1,8 @@
 <?php 
+  if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
   require 'header.php';
 ?>
 <head>
@@ -6,6 +10,19 @@
     <!--Bootstrap libs-->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <style>
+    .blocks{
+      background-image: url('img/fon1.png')!important;
+    }
+    .blocks-inner .text-center
+    {
+      padding-bottom: 40px !important;
+    }
+    .blocks-inner a{
+      position: relative;
+      bottom: -20px;
+    }
+  </style>
 </head>
 
 <!-- Slider -->  
@@ -52,7 +69,7 @@
           <a href="#">Детальніше</a>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 blocks-inner wow  bounceInDown">
+      <div class="col-md-6 col-lg-3 blocks-inner wow bounceInDown">
         <img src="img/logo.png" class="logo-block">
         <div class="text-center">
           <img src="img/sotu.png">
@@ -132,24 +149,6 @@
 <!--Хрень-->
 
 
-
-<!-- <script type="text/javascript">
-  jQuery(window).scroll(function(){
-    var scroll_picca = $(".right-bar").offset().top;
-    
-    console.log(scroll_picca);
-    var x = 0;
-    
-    if ($(this).scrollTop() > scroll_picca) {
-         $(".inc").spincrement({
-          from: 1,
-          duration: 3000
-         });
-    }
-  });
-</script>  -->
-
-
 <!--Статистика-->
 <div class="spincrement d-flex align-items-center">
   <div class="container">
@@ -173,7 +172,7 @@
          <span>$</span><span class="inc">87</span><span>&nbsp млн.</span>
         </div>
         <div class="col-md-12" style="width: 80%"><hr class="col-md-12"></div>
-        <p class=" col-md-12">Загальна вартість експортованого меду за 2018 рік. Це рекордний обсяг у порівнянні з аналогічним періодом минулих років.</p>
+        <p class=" col-md-12">Загальна вартість експортованого меду за 2021 рік. Це рекордний обсяг у порівнянні з аналогічним періодом минулих років.</p>
     </div>
     </div>
   </div>
@@ -185,20 +184,19 @@
 
 
 
-
+ 
 <div class="google-map">
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10182.28056265804!2d30.473732692646422!3d50.355922482987566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c86496026557%3A0x495c2cd8fe739dea!2z0JjQvdGB0YLQuNGC0YPRgiDQn9GH0LXQu9C-0LLQvtC00YHRgtCy0LAg0LjQvC4g0J8u0JguINCf0YDQvtC60L7Qv9C-0LLQuNGH0LA!5e0!3m2!1sru!2sua!4v1534162063069" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+</script>
 </div>
 <?php 
+  if (isset($_POST["submit"])) {
       $to = "oleksin.966@gmail.com";
       $name = $_POST["name"];
       $email = $_POST["email"];
       $message = $_POST["message"];
-  if (isset($_POST["submit"])) {
-      // $charset = "utf-8";
-      // $headerss ="Content-type: text/html; charset=$charset\r\n";
-      // $headerss.="MIME-Version: 1.0\r\n";
-      // $headerss.="Date: ".date('D, d M Y h:i:s O')."\r\n";
       if (stristr($email, '@')) {
         mail($to, $name, $message);
          echo "<script>alert(\"Повідомлення успішно надіслано!\");window.location = window.location.href</script>";
@@ -207,14 +205,14 @@
       }
   }
 ?>
-<footer id="down">
+<footer>
   <div class="footer-hiden">
     <div class="footer-hiden-content">
       <center>
         <div class="footer-logo">
           <img src="img/logo.png">
         </div>
-          <p>Бджолина сім'я</p>
+          <p style="color: red!important;">Бджолина сім'я</p>
       </center>
     </div>
     <div class="footer-hiden-form">
@@ -225,7 +223,12 @@
           <div class="posta"><input type="text" name="message" placeholder="Повідомлення"></div>
         </div>
         <center>
-          <?php echo $err ?>
+          <?php 
+          if (isset($err))
+          {
+            echo $err;
+          }
+          ?>
           <button type="submit" name="submit" id="send-mail" class="btn btn-dark">Відправити</button>
         </center>
       </form>
@@ -246,12 +249,6 @@
 
 </footer> 
 
-<script type="text/javascript">
-    $('#send-mail').click(function () {
-      document.location.href='#down';
-    });
-
-</script>
 
 <script type="text/javascript">
   $(window).scroll(function(){
@@ -259,16 +256,6 @@
   })
 </script> 
 
-
-<!-- <script type="text/javascript">
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-
-$('#myModal1').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-</script> -->
 
 <script type="text/javascript" src="js/js.js"></script>
 <?php require 'js/wow.min.php'; ?>

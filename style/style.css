@@ -1,4 +1,4 @@
-<style>
+
 /*#d87d56 - коричневий
 #b5a642	- коричневий
 #ffd16e - жовтий*/	
@@ -9,7 +9,9 @@
 li{
 	list-style-type: none;
 }
-
+body{
+  width: 100%;
+}
 .navbar{
 	padding-top: 0px;
 	padding-bottom: 0px;
@@ -23,63 +25,16 @@ li{
 .navbar li{
 	padding-left: 20px;
 }
-.reg i{
-	color: #fff;
-	padding:12px;
-	font-size: 30px;
-}
+
 
 input{
   outline: none;  
 }
-
-
-
-
-
 /*Реєстрація*/
  a:hover{
     text-decoration: none;
 }
 
-.reg_it{
-  display: none;
-  position: absolute;
-  margin: 0px 0px 0px -110px;
-  padding: 10px;
-  transition: .5s all ease-in-out;
-  background-color: red;
-  border-radius: 12px;
-  z-index: 800;
-}
-.reg a{
-  color: #fff;
-}
-.reg_it li a:hover .reg_it li{
-  display: block;
-}
-.reg_it::after {
-  content: ''; 
-  position: absolute; 
-  left: 125px; 
-  bottom: 100px; 
-  border: 15px solid transparent; 
-  border-bottom: 15px solid red;
-}
-.reg:hover .reg_it li:last-child{
-  border-top:2px solid black; 
-  transition: .5s all ease-in-out;
-}
-.reg:hover .reg_it li{
-  padding: 5px;
-  color: #fff;
-  font-size: 20px;
-  transition: .5s all ease-in-out;
-}
-.reg:hover .reg_it{
-  display: block;
-  transition: .5s all ease-in-out;
-}
 
 
 /*carousel*/
@@ -113,22 +68,6 @@ input{
 }
 
 
-
-
-/*Modal Window*/
-/*.modal-content{
-  border-radius: 20px;
-}
-.modal-content h4{
-  font-family:'Lobster';
-  font-size: 40px;
-  color: #d87d56;
-}
-.modal{
-  position: absolute;
-}*/
-
-/*Modal Window*/
 
 
 
@@ -443,8 +382,7 @@ footer input[type="text"]::-moz-placeholder {
   background: rgba(0,0,0,0.7);
 }
 
-
-
+  
 .footer-center{
   background-image: url(../img/footer-ef.svg) !important; 
   background-color:#ffd16e; 
@@ -501,6 +439,8 @@ footer input[type="text"]::-moz-placeholder {
  -moz-transform: scale(1.1);
  -o-transform: scale(1.1);
  }
+ 
+
 
 
 
@@ -527,4 +467,3 @@ footer input[type="text"]::-moz-placeholder {
 
 
 
-</style>	

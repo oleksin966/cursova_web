@@ -1,0 +1,42 @@
+
+.title1{
+	width: 100%;
+    padding: 30px 100px 30px 100px;
+	margin:100px auto;
+	border-top: 5px solid #d87d56;
+	border-bottom: 5px solid #d87d56;
+	font-family:'Lobster',sans-serif; 
+	color:#d87d56;
+    animation:blusk 3s infinite; 
+
+}
+nav{
+	position: absolute;
+	top: 0;
+}
+@keyframes blusk{
+	0%{
+		border-top: 5px solid #d87d56;
+		border-bottom: 5px solid #d87d56;
+		color:#d87d56;
+	}
+	50%{
+		border-top: 5px solid lime;
+		border-bottom: 5px solid lime;
+		color:lime;
+	}
+
+}
+	.admin{
+	margin: 0px auto;
+	width: 80%;
+	background:#fff; 
+	z-index: 100;
+	padding: 20px;
+	}
+	@media screen and (max-width: 1024px){
+		.admin{
+			width: 100%;
+			z-index: 100;
+		}
+	}

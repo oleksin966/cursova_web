@@ -1,11 +1,11 @@
-<footer>
+ <footer>
   <div class="footer-hiden">
     <div class="footer-hiden-content">
       <center>
         <div class="footer-logo">
           <img src="img/logo.png">
         </div>
-          <p>Бджолина сім'я</p>
+          <p style="color: red!important;">Бджолина сім'я</p>
       </center>
     </div>
     <div class="footer-hiden-form">
@@ -31,7 +31,6 @@
       </div>  
     </div>
   </div>
-
 </footer> 
 
 
@@ -41,21 +40,8 @@
     $(".box-down-item").css("top","200px");
   })
 </script> 
-
-
-<script type="text/javascript">
-$('#myModal').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-
-$('#myModal1').on('shown.bs.modal', function () {
-  $('#myInput').focus()
-})
-</script>
-<script type="text/javascript" src="js/js.js"></script>
 <?php require 'js/wow.min.php'; ?>
   <!--Bootstrap libs-->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> 
 </body>
-</html>
+</html> 

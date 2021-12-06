@@ -1,0 +1,41 @@
+.basket{
+	position: fixed;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #4d5a2c;
+	top: 10px;
+	right: 10px;
+	z-index: 999;
+	box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+	animation: pulse 4s infinite;
+}
+i{
+	position: relative;
+	font-size: 30px;
+	color: #fff;
+	top: 25px;
+	left: 20px;
+}
+@keyframes pulse{
+	0%{
+		box-shadow: -2px 1px 32px 20px rgba(230,190,30,0.2);
+	}
+	25%{
+		box-shadow: -2px 1px 32px 20px rgba(230,190,30,0.4);
+	}
+	50%{
+		box-shadow: -2px 1px 32px 20px rgba(230,190,30,0.8);
+	}
+	75%{
+		box-shadow: -2px 1px 32px 20px rgba(230,190,30,0.4);
+	}
+	100%{
+		box-shadow: -2px 1px 32px 20px rgba(230,190,30,0.2);
+	}
+}
+.flex-block{
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+}

@@ -1,15 +1,18 @@
 <style type="text/css">
 html{
-	background:url('../img/fone.jpg'); 
+	background:url('img/fone.jpg'); 
 	display: flex;
 	justify-content: center;
 }
 body{
-	width: 80%;
+	width: 80%!important;
 }
 @media screen and (max-width: 1024px){
 	body{
-		width: 100%;
+		width: 100%!important;
+	}
+	.news-text p{
+		font-size: 1px;
 	}
 }
 nav{
@@ -114,5 +117,223 @@ nav{
 }
 
 
-/*http://www.poznavayka.org/uk/zoologiya-2/bdzhola-tvorets-medu/#a3*/
+
+
+/*Products*/
+.products-block{
+	padding: 5px;
+}
+.products-inner p{
+	color: #fff;
+	font-style: italic;
+	width: 100%;
+	word-wrap: break-word;
+}
+.products-inner{
+	background: #b5a642;
+	padding: 3px;
+}
+.products-inner img{
+	width:100%;
+	height: auto;
+}
+.button-article{
+	background: #fff;
+	border-radius: 12px;
+	font-style: italic;
+	border:2px solid #d87d56;
+	padding: 8px;
+	transition: .5s ease-in-out;
+}
+.button-article a{
+	color: gray;
+}
+.button-article:hover a{
+	color:#d87d56;
+}
+.button-article:hover{
+    background:yellow;
+}
+
+.banner{
+	background-image: url("img/banner.png");
+	background-size: 100% 100%;
+	padding: 30px 40px 5px 40px;
+	color: #b5a642;
+	font-family: 'Lobster' , sans-serif;
+}
+
+
+
+
+
+/*Article*/
+.article img{
+	max-width: 80%;
+	height: auto;
+}
+
+
+/*flowers*/
+.flowers{
+	background: lime;
+	border-radius: 12px;
+}
+.flowers h4{
+	color: lime;
+}
+.flowers img{
+	border-radius: 12px;
+}
+
+
+
+/*SLIDER*/
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 300px;
+  background: #ccc;
+  text-align: center;
+  line-height: 300px;
+}
+
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 40%;
+  z-index: 999;
+  display: block;
+  padding: 4% 3%;
+  width: auto;
+  height: auto;
+  background: #2a2a2a;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+
+/*UP*/
+#up{
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	background: red;
+	position: fixed;
+	bottom: 60px;
+	right: 60px;
+	z-index: 999;
+	border-radius: 50%;
+	background: #b5a642;
+	cursor: pointer;
+	transition: 1s ease-in-out;
+}
+#up i{
+	color: #fff;
+	position: relative;
+	font-size: 50px;
+	top: 12px;
+}
+
+
+
+
+/*---NEWS---*/
+.news-item{
+	max-width: 900px;
+	margin:10px; 
+	border:3px solid #b5a642;
+	display: flex;
+	transition: .5s ease-in-out;
+	height: 210px;
+
+}
+.news-text{
+	padding-left: 10px;
+	word-wrap: break-word;
+	transition: .5s ease-in-out;
+	overflow-y: hidden;
+}
+.news-text p{
+	max-width: 80%;
+	font-style: italic;
+	font-size: 20px;
+	color: gray;
+}
+.news-text span{
+	color: #b5a642 
+}
+.news-button{
+	padding: 10px;
+	background: #b5a642;
+	color: #fff;
+	display: flex;
+	align-items: center;
+}
+.news-button i{
+	position: relative;
+	transition: .5s ease-in-out;
+	left: 3px;
+}
+.news-title{
+	color: #b5a642;
+	font-family: 'Open Sans',sans-serif;
+}
+.news{
+	max-width: 1000px;
+	height: auto;
+	margin:0px auto;
+}
+@media screen and (max-width: 1024px){
+	.news-text p{
+		font-size: 15px;
+	}
+	.footer-hiden-content p{
+		font-size: 30px!important;
+	}
+/*	.news-item{
+		flex-direction: column;
+	}*/
+}
+
+
+
+
 </style>

@@ -1,6 +1,8 @@
 <?php session_start(); ?>
-<?php require 'header.php'; ?>
-<?php require 'style/style-second.php'; ?>
+<?php 
+ require 'header.php'; 
+ require 'style/style-second.php'; 
+ ?>
 <head>
 	<title>Все про бджоли</title>
 </head>
@@ -115,11 +117,14 @@
 
 
 </div>
-
-
-
-
-
+	<div id="up">
+		<center><i class="fas fa-chevron-up"></i></center>
+	</div>
+	<script>
+$('#up').click(function(){
+	$(window).scrollTop(0);
+}); 
+</script>
 </body>
 <?php require 'footer.php'; ?>
 
